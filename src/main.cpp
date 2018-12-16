@@ -1,4 +1,5 @@
 #include"ch1.h"
+#include"ch2.h"
 
 #include<iostream>
 
@@ -38,21 +39,21 @@ void testch12() {
 
 }
 
-void testch13(){
+void testch13() {
 	ch1_3 ch13;
 	cout << test_str6 << endl;
 	cout << ch13.replaceSpaces(test_str6) << endl;
 
 }
 
-void testch14(){
+void testch14() {
 	ch1_4 ch14;
 	cout << ch14.isPermutationOfPalindrome(test_str) << endl;
 	cout << ch14.isPermutationOfPalindrome(test_str2) << endl;
 	cout << ch14.isPermutationOfPalindrome(test_str7) << endl;
 }
 
-void testch15(){
+void testch15() {
 	ch1_5 ch15;
 	cout << ch15.oneEditAway(test_str8, test_str9) << endl;
 	cout << ch15.oneEditAway(test_str10, test_str8) << endl;
@@ -82,6 +83,19 @@ int main(int argc, char* argv[]) {
 	testch15();
 	cout << "ch15--------------------" << endl;
 
+	ch2_node *test = new ch2_node();
+
+	test->addNodeFromHead(40);
+	test->addNodeFromHead(30);
+	test->addNodeFromHead(20);
+	test->addNodeFromHead(10);
+	test->printAllNode();
+	cout << "-----------------------" << endl;
+	cout << test->popFromTheEnd() << endl;
+	cout << test->popFromTheEnd() << endl;
+	cout << test->popFromTheEnd() << endl;
+	cout << test->popFromTheEnd() << endl;
+	delete test;
 	return 0;
 }
 
